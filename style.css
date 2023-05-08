@@ -1,0 +1,158 @@
+* {
+  font-family: 'Neue Montreal', sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #120a09;
+}
+
+/* Scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #120a09;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: hsla(360, 100%, 40%, 1);
+  border-radius: 4px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: hsla(360, 100%, 40%, 0.8);
+}
+
+
+h1 {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 30px;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  background-color: #120a09;
+  z-index: 10;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 25px;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 10px 20px #120a09;
+}
+
+#scroll-up {
+  cursor: pointer;
+}
+
+.mail {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+
+main {
+  background-color: #120a09;
+}
+
+.big-name {
+  font-size: 10vw;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  color: white;
+  letter-spacing: 5px;
+  height: 100vh;
+  align-items: center;
+  box-shadow: 0px 0px 10px 20px #120a09;
+  position: relative;
+  cursor: default;
+  text-align: center;
+}
+
+#cesi {
+  display: flex;
+  flex-direction: column;
+  background-color: hsla(360, 100%, 40%, 1);
+  padding: 5%;
+  gap: 50px;
+
+}
+
+.year-container {
+  display: flex;
+  flex-direction: row;
+  gap: 2%;
+}
+
+.year {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  text-transform: uppercase;
+  background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='20' height='20' patternTransform='scale(2) rotate(45)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(360, 100%, 40%, 0.55)'/><path d='M0 10h20z'   stroke-width='10' stroke='hsla(360, 100%, 40%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
+  text-align: center;
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 1px 1px 10px 0px #120a09;
+}
+
+.project-container {
+  display: flex; 
+  flex-direction:column;
+  gap: 30px;
+}
+
+.project {
+  background-color: white;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
+  border: 10px solid  hsla(360, 100%, 40%, 1);
+  box-shadow: 1px 1px 10px 0px #120a09;
+
+}
+
+.project:hover {
+  border: 10px solid  hsla(360, 100%, 30%, 1);
+}
+
+.project-title {
+  color:#120a09;
+}
+
+.context-container {
+  min-height: 200px;
+}
+
+.skill-container {
+  min-height: 200px;
+}
+
+.project:hover .context-container, .skill-container{
+  display: none;
+}
+.project:hover .skill-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.context-and-skill {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
