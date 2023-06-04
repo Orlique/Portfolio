@@ -1,33 +1,27 @@
 * {
   font-family: 'Neue Montreal', sans-serif;
+  color: #1F2328;
 }
 
 body {
   margin: 0;
-  background: #120a09;
 }
 
 /* Scrollbar */
-
-/* width */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 12px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
-  background: #120a09;
+  background: rgb(255, 255, 255);
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
-  background: hsla(360, 100%, 40%, 1);
-  border-radius: 4px;
+  background: hsla(0, 0%, 52%, 0.5);
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: hsla(360, 100%, 40%, 0.8);
+  background: hsla(0, 0%, 52%, 0.6);
 }
 
 
@@ -41,7 +35,7 @@ h1 {
 header {
   position: fixed;
   width: 100%;
-  background-color: #120a09;
+  background-color: #1F2328;
   z-index: 10;
   display: flex;
   flex-direction: row;
@@ -49,7 +43,7 @@ header {
   align-items: center;
   padding: 0px 25px;
   box-sizing: border-box;
-  box-shadow: 0px 0px 10px 20px #120a09;
+  box-shadow: 0px 0px 10px 10px #1F2328;
 }
 
 #scroll-up {
@@ -57,13 +51,8 @@ header {
 }
 
 .mail {
-  text-decoration: none;
   color: white;
   font-size: 18px;
-}
-
-main {
-  background-color: #120a09;
 }
 
 .big-name {
@@ -75,19 +64,44 @@ main {
   letter-spacing: 5px;
   height: 100vh;
   align-items: center;
-  box-shadow: 0px 0px 10px 20px #120a09;
   position: relative;
   cursor: default;
   text-align: center;
+  background: linear-gradient(rgb(0,0,100,0.2), rgba(0, 0, 0, 0.3)), url("./Rouen.jpg");
 }
 
 #cesi {
   display: flex;
   flex-direction: column;
-  background-color: hsla(360, 100%, 40%, 1);
-  padding: 5%;
+  background: #E5E4E4;
+  padding: 5% 10%;
   gap: 50px;
+}
 
+.year-selector-container {
+  display: flex;
+  height: 50px;
+  gap: 5%;
+  margin: 0 10%;
+}
+
+.year-selector {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 1px 1px 10px 0px #24292f;
+  border-radius: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.year-selector:hover {
+  box-shadow: 1px 1px 13px 0px #24292f;
+  background: white;
 }
 
 .year-container {
@@ -100,39 +114,49 @@ main {
   writing-mode: vertical-rl;
   text-orientation: upright;
   text-transform: uppercase;
-  background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='20' height='20' patternTransform='scale(2) rotate(45)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(360, 100%, 40%, 0.55)'/><path d='M0 10h20z'   stroke-width='10' stroke='hsla(360, 100%, 40%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
   text-align: center;
-  color: white;
+  color: #24292f;
   font-size: 50px;
   font-weight: bold;
   padding: 20px;
   background-color: white;
-  box-shadow: 1px 1px 10px 0px #120a09;
+  box-shadow: 1px 1px 10px 0px #24292f;
+  border-radius: 10px;
+
 }
 
 .project-container {
   display: flex; 
   flex-direction:column;
-  gap: 30px;
+  gap: 10px;
+  width: 100%;
 }
 
 .project {
+  display: flex;
   background-color: white;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   padding: 2%;
-  border: 10px solid  hsla(360, 100%, 40%, 1);
-  box-shadow: 1px 1px 10px 0px #120a09;
-
+  border-radius: 10px;
 }
 
 .project:hover {
-  border: 10px solid  hsla(360, 100%, 30%, 1);
+  box-shadow: 1px 1px 13px 0px #24292f;
 }
 
 .project-title {
   color:#120a09;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.project-title svg {
+  height: 60px;
+  width: 60px;
+
 }
 
 .context-container {
@@ -146,7 +170,7 @@ main {
 .project:hover .context-container, .skill-container{
   display: none;
 }
-.project:hover .skill-container {
+.project:hover .skill-container, .context-container {
   display: flex;
   flex-direction: column;
 }
@@ -155,4 +179,9 @@ main {
   display: flex;
   flex-direction: row;
   gap: 20px;
+}
+
+p, li {
+  font-size: 18px;
+  line-height: 26px;
 }
