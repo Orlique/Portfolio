@@ -70,12 +70,37 @@ header {
   background: linear-gradient(rgb(0,0,100,0.2), rgba(0, 0, 0, 0.3)), url("./Rouen.jpg");
 }
 
-#cesi {
+#cesi, #about-me {
+  padding: 5% 10%;
   display: flex;
   flex-direction: column;
   background: #E5E4E4;
-  padding: 5% 10%;
-  gap: 50px;
+  gap: 40px;
+}
+
+#about-me {
+  background-color: white;
+}
+
+.about-me-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.about-me-title {
+  color: #24292f;
+  margin: 0;
+}
+
+.about-me-div {
+  width: 100%;
+  box-shadow: 0px 0px 5px 0px #24292f;
+  border-radius: 10px;
+}
+
+.about-me-div h2 {
+text-align: center;
 }
 
 .year-selector-container {
@@ -83,6 +108,13 @@ header {
   height: 50px;
   gap: 5%;
   margin: 0 10%;
+}
+
+.cesi-title {
+  color: #24292f;
+  font-size: 50px;
+  text-align: center;
+  margin: 10px;
 }
 
 .year-selector {
@@ -93,14 +125,13 @@ header {
   text-align: center;
   align-items: center;
   justify-content: center;
-  box-shadow: 1px 1px 10px 0px #24292f;
+  box-shadow: 0px 0px 5px 0px #24292f;
   border-radius: 10px;
   font-weight: bold;
   text-transform: uppercase;
 }
 
 .year-selector:hover {
-  box-shadow: 1px 1px 13px 0px #24292f;
   background: white;
 }
 
@@ -120,9 +151,7 @@ header {
   font-weight: bold;
   padding: 20px;
   background-color: white;
-  box-shadow: 1px 1px 10px 0px #24292f;
   border-radius: 10px;
-
 }
 
 .project-container {
@@ -184,4 +213,51 @@ header {
 p, li {
   font-size: 18px;
   line-height: 26px;
+}
+
+footer {
+  width: 100%;
+  background-color: #1F2328;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 25px;
+  box-sizing: border-box;
+}
+
+footer svg {
+  height: 50px;
+}
+
+.footer-text {
+  color: white;
+}
+
+@media (max-width: 650px) {
+  .about-me-container {
+    flex-wrap: wrap;
+  }
+
+  .cesi-title {
+    font-size: 40px;
+  }
+
+  .year-selector {
+    font-size: 14px;
+  }
+
+  .year {
+    font-size: 30px;
+    padding: 10px;
+  }
+
+  .project-title {
+    font-size: 20px;
+  }
+
+  p, li {
+    font-size: 15px;
+    line-height: 22px;
+  }
 }
